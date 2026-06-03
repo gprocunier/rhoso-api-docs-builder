@@ -8,7 +8,8 @@ Operator: `keystone-operator`
 ## API Reference
 
 - RHOSO 18.0 docs: [https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_security_services/index](https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_security_services/index)
-- OpenStack API reference: [https://docs.openstack.org/2023.1/api/index.html](https://docs.openstack.org/2023.1/api/index.html)
+- OpenStack API reference: [https://docs.openstack.org/keystone/2023.1/contributor/http-api.html](https://docs.openstack.org/keystone/2023.1/contributor/http-api.html)
+- OpenStack API guide: [https://docs.openstack.org/keystone/2023.1/api_curl_examples.html](https://docs.openstack.org/keystone/2023.1/api_curl_examples.html)
 
 ## Validation URIs
 

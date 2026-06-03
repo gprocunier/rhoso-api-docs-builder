@@ -5,7 +5,7 @@
     "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_load_balancing_as_a_service/index",
     "service_label": "Load-balancer",
     "upstream_guide_url": null,
-    "upstream_reference_url": "https://docs.openstack.org/2023.1/api/index.html"
+    "upstream_reference_url": "https://docs.openstack.org/octavia/2023.1/contributor/modules/octavia.api.v2.html"
   },
   "service": {
     "api_projects": [

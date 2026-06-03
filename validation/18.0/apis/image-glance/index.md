@@ -8,7 +8,7 @@ Operator: `glance-operator`
 ## API Reference
 
 - RHOSO 18.0 docs: [https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/performing_storage_operations/index](https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/performing_storage_operations/index)
-- OpenStack API reference: [https://docs.openstack.org/2023.1/api/index.html](https://docs.openstack.org/2023.1/api/index.html)
+- OpenStack API reference: [https://docs.openstack.org/glance/2023.1/contributor/api/glance.api.v2.html](https://docs.openstack.org/glance/2023.1/contributor/api/glance.api.v2.html)
 
 ## Validation URIs
 

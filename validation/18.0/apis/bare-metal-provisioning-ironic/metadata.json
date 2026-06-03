@@ -4,8 +4,8 @@
     "project": "ironic",
     "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_the_bare_metal_provisioning_service/index",
     "service_label": "Bare Metal",
-    "upstream_guide_url": null,
-    "upstream_reference_url": "https://docs.openstack.org/2023.1/api/index.html"
+    "upstream_guide_url": "https://docs.openstack.org/ironic/2023.1/contributor/webapi-version-history.html",
+    "upstream_reference_url": "https://docs.openstack.org/ironic/2023.1/contributor/webapi.html"
   },
   "service": {
     "api_projects": [

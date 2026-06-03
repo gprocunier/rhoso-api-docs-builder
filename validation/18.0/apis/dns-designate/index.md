@@ -8,7 +8,7 @@ Operator: `designate-operator`
 ## API Reference
 
 - RHOSO 18.0 docs: [https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_dns_as_a_service/index](https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_dns_as_a_service/index)
-- OpenStack API reference: [https://docs.openstack.org/2023.1/api/index.html](https://docs.openstack.org/2023.1/api/index.html)
+- OpenStack API reference: [https://docs.openstack.org/designate/2023.1/contributor/sourcedoc/api.html](https://docs.openstack.org/designate/2023.1/contributor/sourcedoc/api.html)
 
 ## Validation URIs
 

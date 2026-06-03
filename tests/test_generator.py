@@ -33,6 +33,7 @@ def test_build_outputs_writes_validation_tree(tmp_path: Path) -> None:
         upstream_reference_url = api_reference["upstream_reference_url"]
         assert upstream_reference_url.startswith("https://docs.openstack.org/")
         assert "/2023.1/" in upstream_reference_url
+        assert upstream_reference_url != "https://docs.openstack.org/2023.1/api/index.html"
         assert "docs.openstack.org/api-ref" not in upstream_reference_url
         assert "/latest/" not in upstream_reference_url
         upstream_guide_url = api_reference["upstream_guide_url"]
@@ -44,8 +45,13 @@ def test_build_outputs_writes_validation_tree(tmp_path: Path) -> None:
     compute_html_path = site / "validation" / "18.0" / "apis" / "compute-nova" / "index.html"
     assert compute_html_path.exists()
     compute_html = compute_html_path.read_text(encoding="utf-8")
-    assert "https://docs.openstack.org/2023.1/api/index.html" in compute_html
+    assert "https://docs.openstack.org/nova/2023.1/#writing-to-the-api" in compute_html
     assert "https://docs.openstack.org/api-ref/compute/" not in compute_html
+    baremetal_html = (
+        site / "validation" / "18.0" / "apis" / "bare-metal-provisioning-ironic" / "index.html"
+    ).read_text(encoding="utf-8")
+    assert "https://docs.openstack.org/ironic/2023.1/contributor/webapi.html" in baremetal_html
+    assert "https://docs.openstack.org/2023.1/api/index.html" not in baremetal_html
     assert (site / "validation" / "19.0" / "index.html").exists()
 
 

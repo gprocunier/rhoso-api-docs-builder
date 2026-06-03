@@ -10,6 +10,16 @@ REPOSITORY = "gprocunier/rhoso-api-docs-builder"
 DEFAULT_BRANCH = "main"
 OPENSTACK_2023_1_API_INDEX = "https://docs.openstack.org/2023.1/api/index.html"
 OPENSTACK_2026_1_API_INDEX = "https://docs.openstack.org/2026.1/api/index.html"
+OPENSTACK_2023_1_PROJECT_DOCS = "https://docs.openstack.org/{project}/2023.1/{path}"
+OPENSTACK_2026_1_PROJECT_DOCS = "https://docs.openstack.org/{project}/2026.1/{path}"
+
+
+def openstack_2023_1_project_url(project: str, path: str = "") -> str:
+    return OPENSTACK_2023_1_PROJECT_DOCS.format(project=project, path=path)
+
+
+def openstack_2026_1_project_url(project: str, path: str = "") -> str:
+    return OPENSTACK_2026_1_PROJECT_DOCS.format(project=project, path=path)
 
 SOURCES: dict[str, SourceCitation] = {
     "rhds-home": SourceCitation(
@@ -107,72 +117,223 @@ RELEASES: dict[str, ReleaseMap] = {
 
 OPENSTACK_API_REFS: dict[str, tuple[ApiReference, ...]] = {
     "2023.1": (
-        ApiReference("cyborg", "Accelerator Life Cycle Management", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("murano", "Application Catalog", OPENSTACK_2023_1_API_INDEX),
+        ApiReference(
+            "cyborg",
+            "Accelerator Life Cycle Management",
+            openstack_2023_1_project_url("cyborg"),
+        ),
+        ApiReference("murano", "Application Catalog", openstack_2023_1_project_url("murano")),
         ApiReference(
             "freezer",
             "Backup, Restore, and Disaster Recovery",
-            OPENSTACK_2023_1_API_INDEX,
+            openstack_2023_1_project_url("freezer"),
         ),
-        ApiReference("ironic", "Bare Metal", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("cinder", "Block Storage", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("senlin", "Clustering", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("nova", "Compute", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("magnum", "Container Infrastructure Management", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("zun", "Containers", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("trove", "Database", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("designate", "DNS", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("ec2-api", "EC2 API compatibility layer", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("keystone", "Identity", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("glance", "Image", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("watcher", "Infrastructure Optimization", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("masakari", "Instances High Availability", OPENSTACK_2023_1_API_INDEX),
+        ApiReference(
+            "ironic",
+            "Bare Metal",
+            openstack_2023_1_project_url("ironic", "contributor/webapi.html"),
+            openstack_2023_1_project_url("ironic", "contributor/webapi-version-history.html"),
+        ),
+        ApiReference(
+            "cinder",
+            "Block Storage",
+            openstack_2023_1_project_url("cinder", "#using-the-cinder-api"),
+            openstack_2023_1_project_url("cinder", "contributor/api_microversion_history.html"),
+        ),
+        ApiReference("senlin", "Clustering", openstack_2023_1_project_url("senlin")),
+        ApiReference(
+            "nova",
+            "Compute",
+            openstack_2023_1_project_url("nova", "#writing-to-the-api"),
+            openstack_2023_1_project_url("nova", "reference/api-microversion-history.html"),
+        ),
+        ApiReference(
+            "magnum",
+            "Container Infrastructure Management",
+            openstack_2023_1_project_url("magnum"),
+        ),
+        ApiReference("zun", "Containers", openstack_2023_1_project_url("zun")),
+        ApiReference("trove", "Database", openstack_2023_1_project_url("trove")),
+        ApiReference(
+            "designate",
+            "DNS",
+            openstack_2023_1_project_url("designate", "contributor/sourcedoc/api.html"),
+        ),
+        ApiReference(
+            "ec2-api",
+            "EC2 API compatibility layer",
+            openstack_2023_1_project_url("ec2-api"),
+        ),
+        ApiReference(
+            "keystone",
+            "Identity",
+            openstack_2023_1_project_url("keystone", "contributor/http-api.html"),
+            openstack_2023_1_project_url("keystone", "api_curl_examples.html"),
+        ),
+        ApiReference(
+            "glance",
+            "Image",
+            openstack_2023_1_project_url("glance", "contributor/api/glance.api.v2.html"),
+        ),
+        ApiReference(
+            "watcher",
+            "Infrastructure Optimization",
+            openstack_2023_1_project_url("watcher"),
+        ),
+        ApiReference(
+            "masakari",
+            "Instances High Availability",
+            openstack_2023_1_project_url("masakari"),
+        ),
         ApiReference("barbican", "Key Manager", "https://docs.openstack.org/barbican/2023.1/api/"),
-        ApiReference("octavia", "Load-balancer", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("venus", "Log Management", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("zaqar", "Messaging", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("neutron", "Networking", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("tacker", "NFV Orchestration", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("swift", "Object Storage", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("adjutant", "Operations Processes Automation", OPENSTACK_2023_1_API_INDEX),
+        ApiReference(
+            "octavia",
+            "Load-balancer",
+            openstack_2023_1_project_url(
+                "octavia",
+                "contributor/modules/octavia.api.v2.html",
+            ),
+        ),
+        ApiReference("venus", "Log Management", openstack_2023_1_project_url("venus")),
+        ApiReference("zaqar", "Messaging", openstack_2023_1_project_url("zaqar")),
+        ApiReference(
+            "neutron",
+            "Networking",
+            openstack_2023_1_project_url("neutron", "#api-reference"),
+        ),
+        ApiReference(
+            "tacker",
+            "NFV Orchestration",
+            openstack_2023_1_project_url("tacker"),
+        ),
+        ApiReference(
+            "swift",
+            "Object Storage",
+            openstack_2023_1_project_url("swift", "api/object_api_v1_overview.html"),
+        ),
         ApiReference(
             "heat",
             "Orchestration",
             "https://docs.openstack.org/heat/2023.1/api/",
             "https://docs.openstack.org/heat/2023.1/template_guide/",
         ),
-        ApiReference("placement", "Placement", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("cloudkitty", "Rating", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("blazar", "Resource reservation", OPENSTACK_2023_1_API_INDEX),
-        ApiReference("manila", "Shared File Systems", OPENSTACK_2023_1_API_INDEX),
+        ApiReference(
+            "placement",
+            "Placement",
+            openstack_2023_1_project_url("placement", "user/index.html#rest-api"),
+            openstack_2023_1_project_url(
+                "placement",
+                "placement-api-microversion-history.html",
+            ),
+        ),
+        ApiReference("cloudkitty", "Rating", openstack_2023_1_project_url("cloudkitty")),
+        ApiReference("blazar", "Resource reservation", openstack_2023_1_project_url("blazar")),
+        ApiReference(
+            "manila",
+            "Shared File Systems",
+            openstack_2023_1_project_url("manila", "#using-the-manila-api"),
+            openstack_2023_1_project_url("manila", "contributor/api_microversion_history.html"),
+        ),
     ),
     "2026.1": (
-        ApiReference("cyborg", "Accelerator Life Cycle Management", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("ironic", "Bare Metal", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("cinder", "Block Storage", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("nova", "Compute", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("magnum", "Container Infrastructure Management", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("trove", "Database", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("designate", "DNS", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("keystone", "Identity", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("glance", "Image", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("watcher", "Infrastructure Optimization", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("masakari", "Instances High Availability", OPENSTACK_2026_1_API_INDEX),
+        ApiReference(
+            "cyborg",
+            "Accelerator Life Cycle Management",
+            openstack_2026_1_project_url("cyborg"),
+        ),
+        ApiReference(
+            "ironic",
+            "Bare Metal",
+            openstack_2026_1_project_url("ironic", "contributor/webapi.html"),
+            openstack_2026_1_project_url("ironic", "contributor/webapi-version-history.html"),
+        ),
+        ApiReference(
+            "cinder",
+            "Block Storage",
+            openstack_2026_1_project_url("cinder", "#using-the-cinder-api"),
+            openstack_2026_1_project_url("cinder", "contributor/api_microversion_history.html"),
+        ),
+        ApiReference(
+            "nova",
+            "Compute",
+            openstack_2026_1_project_url("nova", "#writing-to-the-api"),
+            openstack_2026_1_project_url("nova", "reference/api-microversion-history.html"),
+        ),
+        ApiReference(
+            "magnum",
+            "Container Infrastructure Management",
+            openstack_2026_1_project_url("magnum"),
+        ),
+        ApiReference("trove", "Database", openstack_2026_1_project_url("trove")),
+        ApiReference(
+            "designate",
+            "DNS",
+            openstack_2026_1_project_url("designate", "contributor/sourcedoc/api.html"),
+        ),
+        ApiReference(
+            "keystone",
+            "Identity",
+            openstack_2026_1_project_url("keystone", "contributor/http-api.html"),
+            openstack_2026_1_project_url("keystone", "api_curl_examples.html"),
+        ),
+        ApiReference(
+            "glance",
+            "Image",
+            openstack_2026_1_project_url("glance", "contributor/api/glance.api.v2.html"),
+        ),
+        ApiReference(
+            "watcher",
+            "Infrastructure Optimization",
+            openstack_2026_1_project_url("watcher"),
+        ),
+        ApiReference(
+            "masakari",
+            "Instances High Availability",
+            openstack_2026_1_project_url("masakari"),
+        ),
         ApiReference("barbican", "Key Manager", "https://docs.openstack.org/barbican/2026.1/api/"),
-        ApiReference("octavia", "Load-balancer", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("zaqar", "Messaging", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("neutron", "Networking", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("swift", "Object Storage", OPENSTACK_2026_1_API_INDEX),
+        ApiReference(
+            "octavia",
+            "Load-balancer",
+            openstack_2026_1_project_url(
+                "octavia",
+                "contributor/modules/octavia.api.v2.html",
+            ),
+        ),
+        ApiReference("zaqar", "Messaging", openstack_2026_1_project_url("zaqar")),
+        ApiReference(
+            "neutron",
+            "Networking",
+            openstack_2026_1_project_url("neutron", "#api-reference"),
+        ),
+        ApiReference(
+            "swift",
+            "Object Storage",
+            openstack_2026_1_project_url("swift", "api/object_api_v1_overview.html"),
+        ),
         ApiReference(
             "heat",
             "Orchestration",
             "https://docs.openstack.org/heat/2026.1/api/",
             "https://docs.openstack.org/heat/2026.1/template_guide/",
         ),
-        ApiReference("placement", "Placement", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("cloudkitty", "Rating", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("blazar", "Resource reservation", OPENSTACK_2026_1_API_INDEX),
-        ApiReference("manila", "Shared File Systems", OPENSTACK_2026_1_API_INDEX),
+        ApiReference(
+            "placement",
+            "Placement",
+            openstack_2026_1_project_url("placement", "user/index.html#rest-api"),
+            openstack_2026_1_project_url(
+                "placement",
+                "placement-api-microversion-history.html",
+            ),
+        ),
+        ApiReference("cloudkitty", "Rating", openstack_2026_1_project_url("cloudkitty")),
+        ApiReference("blazar", "Resource reservation", openstack_2026_1_project_url("blazar")),
+        ApiReference(
+            "manila",
+            "Shared File Systems",
+            openstack_2026_1_project_url("manila", "#using-the-manila-api"),
+            openstack_2026_1_project_url("manila", "contributor/api_microversion_history.html"),
+        ),
     ),
 }
 

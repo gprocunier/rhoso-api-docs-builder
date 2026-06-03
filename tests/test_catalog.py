@@ -50,6 +50,17 @@ def test_openstack_api_refs_are_release_specific() -> None:
                 assert "/latest/" not in api.guide_url
 
 
+def test_rhoso_supported_openstack_api_refs_are_not_release_index_fallbacks() -> None:
+    supported_projects = {
+        project for service in get_services("18.0") for project in service.api_projects
+    }
+    refs = {api.project: api for api in get_api_refs("2023.1")}
+    for project in supported_projects:
+        if project not in refs:
+            continue
+        assert refs[project].reference_url != "https://docs.openstack.org/2023.1/api/index.html"
+
+
 def test_rhoso_api_doc_urls_are_release_specific() -> None:
     assert (
         get_rhoso_api_doc_url("18.0", "nova")

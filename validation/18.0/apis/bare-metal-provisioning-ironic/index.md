@@ -8,7 +8,8 @@ Operator: `ironic-operator`
 ## API Reference
 
 - RHOSO 18.0 docs: [https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_the_bare_metal_provisioning_service/index](https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_the_bare_metal_provisioning_service/index)
-- OpenStack API reference: [https://docs.openstack.org/2023.1/api/index.html](https://docs.openstack.org/2023.1/api/index.html)
+- OpenStack API reference: [https://docs.openstack.org/ironic/2023.1/contributor/webapi.html](https://docs.openstack.org/ironic/2023.1/contributor/webapi.html)
+- OpenStack API guide: [https://docs.openstack.org/ironic/2023.1/contributor/webapi-version-history.html](https://docs.openstack.org/ironic/2023.1/contributor/webapi-version-history.html)
 
 ## Validation URIs
 
