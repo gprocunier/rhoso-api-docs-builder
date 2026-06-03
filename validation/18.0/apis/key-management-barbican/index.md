@@ -9,7 +9,6 @@ Operator: `barbican-operator`
 
 - RHOSO 18.0 docs: [https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_security_services/index](https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_security_services/index)
 - OpenStack API reference: [https://docs.openstack.org/barbican/2023.1/api/](https://docs.openstack.org/barbican/2023.1/api/)
-- OpenStack API guide: [https://docs.openstack.org/barbican/2023.1/api-guide/](https://docs.openstack.org/barbican/2023.1/api-guide/)
 
 ## Validation URIs
 

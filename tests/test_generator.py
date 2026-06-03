@@ -30,9 +30,22 @@ def test_build_outputs_writes_validation_tree(tmp_path: Path) -> None:
             "red_hat_openstack_services_on_openshift/18.0/"
             in api_reference["reference_url"]
         )
-        assert api_reference["upstream_reference_url"].startswith("https://docs.openstack.org/")
+        upstream_reference_url = api_reference["upstream_reference_url"]
+        assert upstream_reference_url.startswith("https://docs.openstack.org/")
+        assert "/2023.1/" in upstream_reference_url
+        assert "docs.openstack.org/api-ref" not in upstream_reference_url
+        assert "/latest/" not in upstream_reference_url
+        upstream_guide_url = api_reference["upstream_guide_url"]
+        if upstream_guide_url:
+            assert "/2023.1/" in upstream_guide_url
+            assert "docs.openstack.org/api-guide" not in upstream_guide_url
+            assert "/latest/" not in upstream_guide_url
     assert (output / "18.0" / "apis" / "compute-nova" / "index.md").exists()
-    assert (site / "validation" / "18.0" / "apis" / "compute-nova" / "index.html").exists()
+    compute_html_path = site / "validation" / "18.0" / "apis" / "compute-nova" / "index.html"
+    assert compute_html_path.exists()
+    compute_html = compute_html_path.read_text(encoding="utf-8")
+    assert "https://docs.openstack.org/2023.1/api/index.html" in compute_html
+    assert "https://docs.openstack.org/api-ref/compute/" not in compute_html
     assert (site / "validation" / "19.0" / "index.html").exists()
 
 

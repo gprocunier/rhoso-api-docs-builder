@@ -5,7 +5,7 @@
     "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_networking_services/index",
     "service_label": "Networking",
     "upstream_guide_url": null,
-    "upstream_reference_url": "https://docs.openstack.org/api-ref/network/"
+    "upstream_reference_url": "https://docs.openstack.org/2023.1/api/index.html"
   },
   "service": {
     "api_projects": [

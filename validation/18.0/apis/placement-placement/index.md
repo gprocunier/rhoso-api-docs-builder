@@ -8,7 +8,7 @@ Operator: `placement-operator`
 ## API Reference
 
 - RHOSO 18.0 docs: [https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuration_reference/placement_3](https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuration_reference/placement_3)
-- OpenStack API reference: [https://docs.openstack.org/api-ref/placement/](https://docs.openstack.org/api-ref/placement/)
+- OpenStack API reference: [https://docs.openstack.org/2023.1/api/index.html](https://docs.openstack.org/2023.1/api/index.html)
 
 ## Validation URIs
 

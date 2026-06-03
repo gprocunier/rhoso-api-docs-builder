@@ -37,6 +37,19 @@ def test_openstack_api_refs_include_core_supported_projects() -> None:
     assert {"nova", "neutron", "cinder", "keystone", "glance", "manila"} <= refs
 
 
+def test_openstack_api_refs_are_release_specific() -> None:
+    for series in ("2023.1", "2026.1"):
+        release_path = f"/{series}/"
+        for api in get_api_refs(series):
+            assert release_path in api.reference_url
+            assert "docs.openstack.org/api-ref" not in api.reference_url
+            assert "/latest/" not in api.reference_url
+            if api.guide_url:
+                assert release_path in api.guide_url
+                assert "docs.openstack.org/api-guide" not in api.guide_url
+                assert "/latest/" not in api.guide_url
+
+
 def test_rhoso_api_doc_urls_are_release_specific() -> None:
     assert (
         get_rhoso_api_doc_url("18.0", "nova")

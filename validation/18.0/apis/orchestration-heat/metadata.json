@@ -5,7 +5,7 @@
     "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/autoscaling_for_instances/index",
     "service_label": "Orchestration",
     "upstream_guide_url": "https://docs.openstack.org/heat/2023.1/template_guide/",
-    "upstream_reference_url": "https://docs.openstack.org/api-ref/orchestration/"
+    "upstream_reference_url": "https://docs.openstack.org/heat/2023.1/api/"
   },
   "service": {
     "api_projects": [

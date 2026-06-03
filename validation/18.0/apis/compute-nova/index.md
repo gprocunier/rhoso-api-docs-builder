@@ -8,8 +8,7 @@ Operator: `nova-operator`
 ## API Reference
 
 - RHOSO 18.0 docs: [https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_the_compute_service_for_instance_creation/index](https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_the_compute_service_for_instance_creation/index)
-- OpenStack API reference: [https://docs.openstack.org/api-ref/compute/](https://docs.openstack.org/api-ref/compute/)
-- OpenStack API guide: [https://docs.openstack.org/api-guide/compute/](https://docs.openstack.org/api-guide/compute/)
+- OpenStack API reference: [https://docs.openstack.org/2023.1/api/index.html](https://docs.openstack.org/2023.1/api/index.html)
 
 ## Validation URIs
 
