@@ -1,0 +1,27 @@
+{
+  "api_reference": {
+    "guide_url": null,
+    "project": "designate",
+    "reference_url": "https://docs.openstack.org/api-ref/dns/",
+    "service_label": "DNS"
+  },
+  "service": {
+    "api_projects": [
+      "designate"
+    ],
+    "description": "Provides DNS as a service and a REST API integrated with Networking and Identity.",
+    "limitations": [],
+    "name": "DNS (designate)",
+    "operator": "designate-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  "slug": "dns-designate",
+  "uris": {
+    "github_tree": "https://github.com/gprocunier/rhoso-api-docs-builder/tree/main/validation/18.0/apis/dns-designate/",
+    "pages": "https://gprocunier.github.io/rhoso-api-docs-builder/validation/18.0/apis/dns-designate/",
+    "semantic": "https://github.com/gprocunier/rhoso-api-docs-builder/validation/18.0/apis/dns-designate/"
+  }
+}

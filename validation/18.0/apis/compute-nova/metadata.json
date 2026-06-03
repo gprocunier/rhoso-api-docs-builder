@@ -1,0 +1,37 @@
+{
+  "api_reference": {
+    "guide_url": "https://docs.openstack.org/api-guide/compute/",
+    "project": "nova",
+    "reference_url": "https://docs.openstack.org/api-ref/compute/",
+    "service_label": "Compute"
+  },
+  "service": {
+    "api_projects": [
+      "nova"
+    ],
+    "description": "Provides compute resource provisioning through libvirt or ironic drivers.",
+    "limitations": [
+      "Off-path network backends",
+      "Custom policies without support exception",
+      "nova-serialproxy and nova-spicehtml5proxy packages",
+      "File injection of personality files",
+      "Persistent memory for instances",
+      "QEMU emulation of non-native architectures",
+      "LVM as an image backend",
+      "ploop image format",
+      "NFS versions earlier than 4"
+    ],
+    "name": "Compute (nova)",
+    "operator": "nova-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  "slug": "compute-nova",
+  "uris": {
+    "github_tree": "https://github.com/gprocunier/rhoso-api-docs-builder/tree/main/validation/18.0/apis/compute-nova/",
+    "pages": "https://gprocunier.github.io/rhoso-api-docs-builder/validation/18.0/apis/compute-nova/",
+    "semantic": "https://github.com/gprocunier/rhoso-api-docs-builder/validation/18.0/apis/compute-nova/"
+  }
+}

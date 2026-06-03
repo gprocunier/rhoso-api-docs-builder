@@ -1,0 +1,27 @@
+{
+  "api_reference": {
+    "guide_url": null,
+    "project": "keystone",
+    "reference_url": "https://docs.openstack.org/api-ref/identity/",
+    "service_label": "Identity"
+  },
+  "service": {
+    "api_projects": [
+      "keystone"
+    ],
+    "description": "Provides authentication, authorization, users, projects, and roles.",
+    "limitations": [],
+    "name": "Identity (keystone)",
+    "operator": "keystone-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  "slug": "identity-keystone",
+  "uris": {
+    "github_tree": "https://github.com/gprocunier/rhoso-api-docs-builder/tree/main/validation/18.0/apis/identity-keystone/",
+    "pages": "https://gprocunier.github.io/rhoso-api-docs-builder/validation/18.0/apis/identity-keystone/",
+    "semantic": "https://github.com/gprocunier/rhoso-api-docs-builder/validation/18.0/apis/identity-keystone/"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "api_reference": {
+    "guide_url": "https://docs.openstack.org/barbican/2023.1/api-guide/",
+    "project": "barbican",
+    "reference_url": "https://docs.openstack.org/barbican/2023.1/api/",
+    "service_label": "Key Manager"
+  },
+  "service": {
+    "api_projects": [
+      "barbican"
+    ],
+    "description": "Provides secure storage and management of secrets, keys, and certificates.",
+    "limitations": [],
+    "name": "Key Management (barbican)",
+    "operator": "barbican-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  "slug": "key-management-barbican",
+  "uris": {
+    "github_tree": "https://github.com/gprocunier/rhoso-api-docs-builder/tree/main/validation/18.0/apis/key-management-barbican/",
+    "pages": "https://gprocunier.github.io/rhoso-api-docs-builder/validation/18.0/apis/key-management-barbican/",
+    "semantic": "https://github.com/gprocunier/rhoso-api-docs-builder/validation/18.0/apis/key-management-barbican/"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "api_reference": {
+    "guide_url": null,
+    "project": "ironic",
+    "reference_url": "https://docs.openstack.org/api-ref/baremetal/",
+    "service_label": "Bare Metal"
+  },
+  "service": {
+    "api_projects": [
+      "ironic"
+    ],
+    "description": "Supports physical machines with hardware-specific drivers and integrates with Compute.",
+    "limitations": [],
+    "name": "Bare Metal Provisioning (ironic)",
+    "operator": "ironic-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  "slug": "bare-metal-provisioning-ironic",
+  "uris": {
+    "github_tree": "https://github.com/gprocunier/rhoso-api-docs-builder/tree/main/validation/18.0/apis/bare-metal-provisioning-ironic/",
+    "pages": "https://gprocunier.github.io/rhoso-api-docs-builder/validation/18.0/apis/bare-metal-provisioning-ironic/",
+    "semantic": "https://github.com/gprocunier/rhoso-api-docs-builder/validation/18.0/apis/bare-metal-provisioning-ironic/"
+  }
+}

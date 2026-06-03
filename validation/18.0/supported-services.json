@@ -1,0 +1,270 @@
+[
+  {
+    "api_projects": [
+      "ironic"
+    ],
+    "description": "Supports physical machines with hardware-specific drivers and integrates with Compute.",
+    "limitations": [],
+    "name": "Bare Metal Provisioning (ironic)",
+    "operator": "ironic-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [],
+    "description": "Used by the OpenStack Operator during bare-metal node provisioning.",
+    "limitations": [],
+    "name": "OpenStack bare-metal provisioning operator",
+    "operator": "openstack-baremetal-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "cinder"
+    ],
+    "description": "Provides and manages persistent block storage volumes for virtual machine instances.",
+    "limitations": [
+      "Cinder replication",
+      "LVM driver",
+      "NFS versions earlier than 4"
+    ],
+    "name": "Block Storage (cinder)",
+    "operator": "cinder-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "nova"
+    ],
+    "description": "Provides compute resource provisioning through libvirt or ironic drivers.",
+    "limitations": [
+      "Off-path network backends",
+      "Custom policies without support exception",
+      "nova-serialproxy and nova-spicehtml5proxy packages",
+      "File injection of personality files",
+      "Persistent memory for instances",
+      "QEMU emulation of non-native architectures",
+      "LVM as an image backend",
+      "ploop image format",
+      "NFS versions earlier than 4"
+    ],
+    "name": "Compute (nova)",
+    "operator": "nova-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [],
+    "description": "Provides a browser-based dashboard for cloud resources and user access.",
+    "limitations": [],
+    "name": "Dashboard (horizon)",
+    "operator": "horizon-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "designate"
+    ],
+    "description": "Provides DNS as a service and a REST API integrated with Networking and Identity.",
+    "limitations": [],
+    "name": "DNS (designate)",
+    "operator": "designate-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "keystone"
+    ],
+    "description": "Provides authentication, authorization, users, projects, and roles.",
+    "limitations": [],
+    "name": "Identity (keystone)",
+    "operator": "keystone-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "glance"
+    ],
+    "description": "Stores virtual machine images and volume snapshots.",
+    "limitations": [
+      "Only x86_64 architecture is supported",
+      "NFS versions earlier than 4"
+    ],
+    "name": "Image (glance)",
+    "operator": "glance-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "barbican"
+    ],
+    "description": "Provides secure storage and management of secrets, keys, and certificates.",
+    "limitations": [],
+    "name": "Key Management (barbican)",
+    "operator": "barbican-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "octavia"
+    ],
+    "description": "Provides load balancing as a service for cloud workloads.",
+    "limitations": [],
+    "name": "Load balancing (octavia)",
+    "operator": "octavia-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [],
+    "description": "Deploys and manages MariaDB Galera clusters for RHOSO infrastructure.",
+    "limitations": [],
+    "name": "MariaDB",
+    "operator": "mariadb-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [],
+    "description": "Provides infrastructure caching support.",
+    "limitations": [],
+    "name": "Memcached",
+    "operator": "infra-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "neutron"
+    ],
+    "description": "Provides networking as a service for virtual compute environments.",
+    "limitations": [],
+    "name": "Networking (neutron)",
+    "operator": "neutron-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "swift"
+    ],
+    "description": "Provides durable object storage for unstructured data.",
+    "limitations": [],
+    "name": "Object Storage (swift)",
+    "operator": "swift-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [],
+    "description": "Deploys and manages OVN infrastructure.",
+    "limitations": [],
+    "name": "OVN",
+    "operator": "ovn-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "heat"
+    ],
+    "description": "Provides template-based orchestration of cloud resource stacks.",
+    "limitations": [],
+    "name": "Orchestration (heat)",
+    "operator": "heat-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "placement"
+    ],
+    "description": "Installs and manages OpenStack Placement.",
+    "limitations": [],
+    "name": "Placement (placement)",
+    "operator": "placement-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [],
+    "description": "Deploys and manages RabbitMQ clusters for RHOSO infrastructure.",
+    "limitations": [],
+    "name": "RabbitMQ",
+    "operator": "rabbitmq-cluster-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "manila"
+    ],
+    "description": "Provisions shared file systems for virtual machines, bare-metal nodes, and containers.",
+    "limitations": [
+      "NFS versions earlier than 4.1 for CephFS-NFS back ends"
+    ],
+    "name": "Shared File Systems (manila)",
+    "operator": "manila-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  {
+    "api_projects": [
+      "ceilometer",
+      "prometheus"
+    ],
+    "description": "Collects usage data for billing, monitoring, and alerts.",
+    "limitations": [],
+    "name": "Telemetry (ceilometer, prometheus)",
+    "operator": "telemetry-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  }
+]

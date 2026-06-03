@@ -1,0 +1,29 @@
+{
+  "api_reference": {
+    "guide_url": null,
+    "project": "manila",
+    "reference_url": "https://docs.openstack.org/api-ref/shared-file-system/",
+    "service_label": "Shared File Systems"
+  },
+  "service": {
+    "api_projects": [
+      "manila"
+    ],
+    "description": "Provisions shared file systems for virtual machines, bare-metal nodes, and containers.",
+    "limitations": [
+      "NFS versions earlier than 4.1 for CephFS-NFS back ends"
+    ],
+    "name": "Shared File Systems (manila)",
+    "operator": "manila-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  "slug": "shared-file-systems-manila",
+  "uris": {
+    "github_tree": "https://github.com/gprocunier/rhoso-api-docs-builder/tree/main/validation/18.0/apis/shared-file-systems-manila/",
+    "pages": "https://gprocunier.github.io/rhoso-api-docs-builder/validation/18.0/apis/shared-file-systems-manila/",
+    "semantic": "https://github.com/gprocunier/rhoso-api-docs-builder/validation/18.0/apis/shared-file-systems-manila/"
+  }
+}

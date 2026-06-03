@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RHOSO 18.0 API validation</title>
+  <link rel="stylesheet" href="/rhoso-api-docs-builder/styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="/rhoso-api-docs-builder/">RHOSO API Docs Builder</a>
+    <a href="https://ux.redhat.com/">RHDS</a>
+    <a href="https://docs.redhat.com/">Red Hat Docs</a>
+  </header>
+  <main>
+<section class="hero compact">
+  <p class="eyebrow">OpenStack 2023.1
+  Antelope</p>
+  <h1>RHOSO 18.0 supported API tree</h1>
+  <p class="lead">Every API listed here belongs to a component shipped in a supported state
+  by Red Hat for this RHOSO release.</p>
+</section>
+<section class="view-controls" aria-label="View mode">
+  <input type="radio" id="view-tiles" name="view-mode" checked>
+  <label for="view-tiles">Tiles</label>
+  <input type="radio" id="view-list" name="view-mode">
+  <label for="view-list">List</label>
+  <section class="grid api-tiles">
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/bare-metal-provisioning-ironic/">Bare Metal Provisioning (ironic)</a></h2>
+  <p>Supports physical machines with hardware-specific drivers and integrates with Compute.</p>
+  <dl>
+    <dt>Project</dt><dd>ironic</dd>
+    <dt>Operator</dt><dd>ironic-operator</dd>
+  </dl>
+</article>
+
+
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/block-storage-cinder/">Block Storage (cinder)</a></h2>
+  <p>Provides and manages persistent block storage volumes for virtual machine instances.</p>
+  <dl>
+    <dt>Project</dt><dd>cinder</dd>
+    <dt>Operator</dt><dd>cinder-operator</dd>
+  </dl>
+</article>
+
+
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/compute-nova/">Compute (nova)</a></h2>
+  <p>Provides compute resource provisioning through libvirt or ironic drivers.</p>
+  <dl>
+    <dt>Project</dt><dd>nova</dd>
+    <dt>Operator</dt><dd>nova-operator</dd>
+  </dl>
+</article>
+
+
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/dns-designate/">DNS (designate)</a></h2>
+  <p>Provides DNS as a service and a REST API integrated with Networking and Identity.</p>
+  <dl>
+    <dt>Project</dt><dd>designate</dd>
+    <dt>Operator</dt><dd>designate-operator</dd>
+  </dl>
+</article>
+
+
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/identity-keystone/">Identity (keystone)</a></h2>
+  <p>Provides authentication, authorization, users, projects, and roles.</p>
+  <dl>
+    <dt>Project</dt><dd>keystone</dd>
+    <dt>Operator</dt><dd>keystone-operator</dd>
+  </dl>
+</article>
+
+
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/image-glance/">Image (glance)</a></h2>
+  <p>Stores virtual machine images and volume snapshots.</p>
+  <dl>
+    <dt>Project</dt><dd>glance</dd>
+    <dt>Operator</dt><dd>glance-operator</dd>
+  </dl>
+</article>
+
+
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/key-management-barbican/">Key Management (barbican)</a></h2>
+  <p>Provides secure storage and management of secrets, keys, and certificates.</p>
+  <dl>
+    <dt>Project</dt><dd>barbican</dd>
+    <dt>Operator</dt><dd>barbican-operator</dd>
+  </dl>
+</article>
+
+
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/load-balancing-octavia/">Load balancing (octavia)</a></h2>
+  <p>Provides load balancing as a service for cloud workloads.</p>
+  <dl>
+    <dt>Project</dt><dd>octavia</dd>
+    <dt>Operator</dt><dd>octavia-operator</dd>
+  </dl>
+</article>
+
+
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/networking-neutron/">Networking (neutron)</a></h2>
+  <p>Provides networking as a service for virtual compute environments.</p>
+  <dl>
+    <dt>Project</dt><dd>neutron</dd>
+    <dt>Operator</dt><dd>neutron-operator</dd>
+  </dl>
+</article>
+
+
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/object-storage-swift/">Object Storage (swift)</a></h2>
+  <p>Provides durable object storage for unstructured data.</p>
+  <dl>
+    <dt>Project</dt><dd>swift</dd>
+    <dt>Operator</dt><dd>swift-operator</dd>
+  </dl>
+</article>
+
+
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/orchestration-heat/">Orchestration (heat)</a></h2>
+  <p>Provides template-based orchestration of cloud resource stacks.</p>
+  <dl>
+    <dt>Project</dt><dd>heat</dd>
+    <dt>Operator</dt><dd>heat-operator</dd>
+  </dl>
+</article>
+
+
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/placement-placement/">Placement (placement)</a></h2>
+  <p>Installs and manages OpenStack Placement.</p>
+  <dl>
+    <dt>Project</dt><dd>placement</dd>
+    <dt>Operator</dt><dd>placement-operator</dd>
+  </dl>
+</article>
+
+
+<article class="card">
+  <p class="tag">Supported</p>
+  <h2><a href="apis/shared-file-systems-manila/">Shared File Systems (manila)</a></h2>
+  <p>Provisions shared file systems for virtual machines, bare-metal nodes, and containers.</p>
+  <dl>
+    <dt>Project</dt><dd>manila</dd>
+    <dt>Operator</dt><dd>manila-operator</dd>
+  </dl>
+</article>
+</section>
+  <section class="api-list">
+    <table>
+      <thead>
+        <tr>
+          <th>RHOSO service</th>
+          <th>OpenStack project</th>
+          <th>Operator</th>
+          <th>Upstream API</th>
+        </tr>
+      </thead>
+      <tbody>
+<tr>
+  <td data-label="RHOSO service"><a href="apis/bare-metal-provisioning-ironic/">Bare Metal Provisioning (ironic)</a></td>
+  <td data-label="OpenStack project"><code>ironic</code></td>
+  <td data-label="Operator">ironic-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/api-ref/baremetal/">API reference</a>
+  </td>
+</tr>
+
+
+<tr>
+  <td data-label="RHOSO service"><a href="apis/block-storage-cinder/">Block Storage (cinder)</a></td>
+  <td data-label="OpenStack project"><code>cinder</code></td>
+  <td data-label="Operator">cinder-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/api-ref/block-storage/">API reference</a>
+  </td>
+</tr>
+
+
+<tr>
+  <td data-label="RHOSO service"><a href="apis/compute-nova/">Compute (nova)</a></td>
+  <td data-label="OpenStack project"><code>nova</code></td>
+  <td data-label="Operator">nova-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/api-ref/compute/">API reference</a>
+  </td>
+</tr>
+
+
+<tr>
+  <td data-label="RHOSO service"><a href="apis/dns-designate/">DNS (designate)</a></td>
+  <td data-label="OpenStack project"><code>designate</code></td>
+  <td data-label="Operator">designate-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/api-ref/dns/">API reference</a>
+  </td>
+</tr>
+
+
+<tr>
+  <td data-label="RHOSO service"><a href="apis/identity-keystone/">Identity (keystone)</a></td>
+  <td data-label="OpenStack project"><code>keystone</code></td>
+  <td data-label="Operator">keystone-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/api-ref/identity/">API reference</a>
+  </td>
+</tr>
+
+
+<tr>
+  <td data-label="RHOSO service"><a href="apis/image-glance/">Image (glance)</a></td>
+  <td data-label="OpenStack project"><code>glance</code></td>
+  <td data-label="Operator">glance-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/api-ref/image/">API reference</a>
+  </td>
+</tr>
+
+
+<tr>
+  <td data-label="RHOSO service"><a href="apis/key-management-barbican/">Key Management (barbican)</a></td>
+  <td data-label="OpenStack project"><code>barbican</code></td>
+  <td data-label="Operator">barbican-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/barbican/2023.1/api/">API reference</a>
+  </td>
+</tr>
+
+
+<tr>
+  <td data-label="RHOSO service"><a href="apis/load-balancing-octavia/">Load balancing (octavia)</a></td>
+  <td data-label="OpenStack project"><code>octavia</code></td>
+  <td data-label="Operator">octavia-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/api-ref/load-balancer/">API reference</a>
+  </td>
+</tr>
+
+
+<tr>
+  <td data-label="RHOSO service"><a href="apis/networking-neutron/">Networking (neutron)</a></td>
+  <td data-label="OpenStack project"><code>neutron</code></td>
+  <td data-label="Operator">neutron-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/api-ref/network/">API reference</a>
+  </td>
+</tr>
+
+
+<tr>
+  <td data-label="RHOSO service"><a href="apis/object-storage-swift/">Object Storage (swift)</a></td>
+  <td data-label="OpenStack project"><code>swift</code></td>
+  <td data-label="Operator">swift-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/api-ref/object-store/">API reference</a>
+  </td>
+</tr>
+
+
+<tr>
+  <td data-label="RHOSO service"><a href="apis/orchestration-heat/">Orchestration (heat)</a></td>
+  <td data-label="OpenStack project"><code>heat</code></td>
+  <td data-label="Operator">heat-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/api-ref/orchestration/">API reference</a>
+  </td>
+</tr>
+
+
+<tr>
+  <td data-label="RHOSO service"><a href="apis/placement-placement/">Placement (placement)</a></td>
+  <td data-label="OpenStack project"><code>placement</code></td>
+  <td data-label="Operator">placement-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/api-ref/placement/">API reference</a>
+  </td>
+</tr>
+
+
+<tr>
+  <td data-label="RHOSO service"><a href="apis/shared-file-systems-manila/">Shared File Systems (manila)</a></td>
+  <td data-label="OpenStack project"><code>manila</code></td>
+  <td data-label="Operator">manila-operator</td>
+  <td data-label="Upstream API">
+    <a href="https://docs.openstack.org/api-ref/shared-file-system/">API reference</a>
+  </td>
+</tr>
+</tbody>
+    </table>
+  </section>
+</section>
+<section class="surface">
+  <h2>Supported services without a matched OpenStack API reference</h2>
+  <ul><li>OpenStack bare-metal provisioning operator <code>openstack-baremetal-operator</code></li>
+<li>Dashboard (horizon) <code>horizon-operator</code></li>
+<li>MariaDB <code>mariadb-operator</code></li>
+<li>Memcached <code>infra-operator</code></li>
+<li>OVN <code>ovn-operator</code></li>
+<li>RabbitMQ <code>rabbitmq-cluster-operator</code></li>
+<li>Telemetry (ceilometer, prometheus) <code>telemetry-operator</code></li></ul>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "api_reference": {
+    "guide_url": null,
+    "project": "glance",
+    "reference_url": "https://docs.openstack.org/api-ref/image/",
+    "service_label": "Image"
+  },
+  "service": {
+    "api_projects": [
+      "glance"
+    ],
+    "description": "Stores virtual machine images and volume snapshots.",
+    "limitations": [
+      "Only x86_64 architecture is supported",
+      "NFS versions earlier than 4"
+    ],
+    "name": "Image (glance)",
+    "operator": "glance-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  "slug": "image-glance",
+  "uris": {
+    "github_tree": "https://github.com/gprocunier/rhoso-api-docs-builder/tree/main/validation/18.0/apis/image-glance/",
+    "pages": "https://gprocunier.github.io/rhoso-api-docs-builder/validation/18.0/apis/image-glance/",
+    "semantic": "https://github.com/gprocunier/rhoso-api-docs-builder/validation/18.0/apis/image-glance/"
+  }
+}

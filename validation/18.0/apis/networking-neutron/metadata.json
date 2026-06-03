@@ -1,0 +1,27 @@
+{
+  "api_reference": {
+    "guide_url": null,
+    "project": "neutron",
+    "reference_url": "https://docs.openstack.org/api-ref/network/",
+    "service_label": "Networking"
+  },
+  "service": {
+    "api_projects": [
+      "neutron"
+    ],
+    "description": "Provides networking as a service for virtual compute environments.",
+    "limitations": [],
+    "name": "Networking (neutron)",
+    "operator": "neutron-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  "slug": "networking-neutron",
+  "uris": {
+    "github_tree": "https://github.com/gprocunier/rhoso-api-docs-builder/tree/main/validation/18.0/apis/networking-neutron/",
+    "pages": "https://gprocunier.github.io/rhoso-api-docs-builder/validation/18.0/apis/networking-neutron/",
+    "semantic": "https://github.com/gprocunier/rhoso-api-docs-builder/validation/18.0/apis/networking-neutron/"
+  }
+}

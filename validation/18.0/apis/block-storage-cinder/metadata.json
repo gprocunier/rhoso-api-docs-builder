@@ -1,0 +1,31 @@
+{
+  "api_reference": {
+    "guide_url": null,
+    "project": "cinder",
+    "reference_url": "https://docs.openstack.org/api-ref/block-storage/",
+    "service_label": "Block Storage"
+  },
+  "service": {
+    "api_projects": [
+      "cinder"
+    ],
+    "description": "Provides and manages persistent block storage volumes for virtual machine instances.",
+    "limitations": [
+      "Cinder replication",
+      "LVM driver",
+      "NFS versions earlier than 4"
+    ],
+    "name": "Block Storage (cinder)",
+    "operator": "cinder-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  "slug": "block-storage-cinder",
+  "uris": {
+    "github_tree": "https://github.com/gprocunier/rhoso-api-docs-builder/tree/main/validation/18.0/apis/block-storage-cinder/",
+    "pages": "https://gprocunier.github.io/rhoso-api-docs-builder/validation/18.0/apis/block-storage-cinder/",
+    "semantic": "https://github.com/gprocunier/rhoso-api-docs-builder/validation/18.0/apis/block-storage-cinder/"
+  }
+}

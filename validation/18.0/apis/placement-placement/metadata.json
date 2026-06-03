@@ -1,0 +1,27 @@
+{
+  "api_reference": {
+    "guide_url": null,
+    "project": "placement",
+    "reference_url": "https://docs.openstack.org/api-ref/placement/",
+    "service_label": "Placement"
+  },
+  "service": {
+    "api_projects": [
+      "placement"
+    ],
+    "description": "Installs and manages OpenStack Placement.",
+    "limitations": [],
+    "name": "Placement (placement)",
+    "operator": "placement-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  "slug": "placement-placement",
+  "uris": {
+    "github_tree": "https://github.com/gprocunier/rhoso-api-docs-builder/tree/main/validation/18.0/apis/placement-placement/",
+    "pages": "https://gprocunier.github.io/rhoso-api-docs-builder/validation/18.0/apis/placement-placement/",
+    "semantic": "https://github.com/gprocunier/rhoso-api-docs-builder/validation/18.0/apis/placement-placement/"
+  }
+}

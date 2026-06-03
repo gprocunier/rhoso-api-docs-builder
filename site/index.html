@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RHOSO API Docs Builder</title>
+  <link rel="stylesheet" href="/rhoso-api-docs-builder/styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="/rhoso-api-docs-builder/">RHOSO API Docs Builder</a>
+    <a href="https://ux.redhat.com/">RHDS</a>
+    <a href="https://docs.redhat.com/">Red Hat Docs</a>
+  </header>
+  <main>
+<section class="hero root-hero">
+  <div>
+    <p class="eyebrow">RHOSO API validation</p>
+    <h1>Red Hat OpenStack Services on OpenShift API docs builder</h1>
+    <p class="lead">Select an RHOSO release and inspect the Red Hat-supported OpenStack API
+    references for that release.</p>
+  </div>
+  <form class="release-picker" action="/rhoso-api-docs-builder/validation/18.0/">
+    <label for="release-select">Release</label>
+    <select id="release-select" name="release"
+      onchange="window.location.href = this.options[this.selectedIndex].value">
+        <option value="/rhoso-api-docs-builder/validation/18.0/" selected>RHOSO 18.0 - Antelope</option>
+        <option value="/rhoso-api-docs-builder/validation/19.0/">RHOSO 19.0 beta - Gazpacho</option>
+    </select>
+    <a class="button" href="/rhoso-api-docs-builder/validation/18.0/">
+      Open RHOSO 18.0
+    </a>
+  </form>
+</section>
+<section class="metric-strip">
+  <article>
+    <span>13</span>
+    <p>supported API references</p>
+  </article>
+  <article>
+    <span>20</span>
+    <p>supported RHOSO services</p>
+  </article>
+  <article>
+    <span>2</span>
+    <p>tracked RHOSO releases</p>
+  </article>
+</section>
+</main>
+</body>
+</html>

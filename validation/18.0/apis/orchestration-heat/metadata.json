@@ -1,0 +1,27 @@
+{
+  "api_reference": {
+    "guide_url": "https://docs.openstack.org/heat/2023.1/template_guide/",
+    "project": "heat",
+    "reference_url": "https://docs.openstack.org/api-ref/orchestration/",
+    "service_label": "Orchestration"
+  },
+  "service": {
+    "api_projects": [
+      "heat"
+    ],
+    "description": "Provides template-based orchestration of cloud resource stacks.",
+    "limitations": [],
+    "name": "Orchestration (heat)",
+    "operator": "heat-operator",
+    "source_ids": [
+      "rhoso-18-overview"
+    ],
+    "support_status": "supported"
+  },
+  "slug": "orchestration-heat",
+  "uris": {
+    "github_tree": "https://github.com/gprocunier/rhoso-api-docs-builder/tree/main/validation/18.0/apis/orchestration-heat/",
+    "pages": "https://gprocunier.github.io/rhoso-api-docs-builder/validation/18.0/apis/orchestration-heat/",
+    "semantic": "https://github.com/gprocunier/rhoso-api-docs-builder/validation/18.0/apis/orchestration-heat/"
+  }
+}
