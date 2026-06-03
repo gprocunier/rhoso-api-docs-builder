@@ -40,3 +40,9 @@ site/
 - unmatched RHOSO-supported services
 - upstream APIs excluded because RHOSO support data does not select them
 - semantic, GitHub tree, and GitHub Pages URIs for every supported API
+
+For every matched API, `api_reference.reference_url` is the primary public
+documentation link and must point at the selected RHOSO release version on Red
+Hat Docs. The corresponding OpenStack REST API corpus URL is retained as
+`api_reference.upstream_reference_url`, with `upstream_guide_url` when a
+release-specific upstream guide exists.

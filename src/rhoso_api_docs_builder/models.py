@@ -35,6 +35,8 @@ class ApiReference:
     service_label: str
     reference_url: str
     guide_url: str | None = None
+    upstream_reference_url: str | None = None
+    upstream_guide_url: str | None = None
 
     def to_dict(self) -> dict[str, object]:
         return asdict(self)

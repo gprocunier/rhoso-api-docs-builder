@@ -1,9 +1,11 @@
 {
   "api_reference": {
-    "guide_url": "https://docs.openstack.org/api-guide/compute/",
+    "guide_url": null,
     "project": "nova",
-    "reference_url": "https://docs.openstack.org/api-ref/compute/",
-    "service_label": "Compute"
+    "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_the_compute_service_for_instance_creation/index",
+    "service_label": "Compute",
+    "upstream_guide_url": "https://docs.openstack.org/api-guide/compute/",
+    "upstream_reference_url": "https://docs.openstack.org/api-ref/compute/"
   },
   "service": {
     "api_projects": [

@@ -2,8 +2,10 @@
   "api_reference": {
     "guide_url": null,
     "project": "glance",
-    "reference_url": "https://docs.openstack.org/api-ref/image/",
-    "service_label": "Image"
+    "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/performing_storage_operations/index",
+    "service_label": "Image",
+    "upstream_guide_url": null,
+    "upstream_reference_url": "https://docs.openstack.org/api-ref/image/"
   },
   "service": {
     "api_projects": [

@@ -30,6 +30,12 @@ SOURCES: dict[str, SourceCitation] = {
         ),
         note="Primary RHOSO 18.0 source for service operators and known limitations.",
     ),
+    "rhoso-18-docs": SourceCitation(
+        id="rhoso-18-docs",
+        title="RHOSO 18.0 Red Hat documentation index",
+        url="https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0",
+        note="Version-specific Red Hat documentation used for primary API documentation links.",
+    ),
     "openstack-2023.1-api": SourceCitation(
         id="openstack-2023.1-api",
         title="OpenStack 2023.1 API reference index",
@@ -50,13 +56,36 @@ SOURCES: dict[str, SourceCitation] = {
     ),
 }
 
+RHOSO_18_DOC_BASE = (
+    "https://docs.redhat.com/en/documentation/"
+    "red_hat_openstack_services_on_openshift/18.0/html"
+)
+
+RHOSO_API_DOC_URLS: dict[str, dict[str, str]] = {
+    "18.0": {
+        "barbican": f"{RHOSO_18_DOC_BASE}/configuring_security_services/index",
+        "cinder": f"{RHOSO_18_DOC_BASE}/performing_storage_operations/index",
+        "designate": f"{RHOSO_18_DOC_BASE}/configuring_dns_as_a_service/index",
+        "glance": f"{RHOSO_18_DOC_BASE}/performing_storage_operations/index",
+        "heat": f"{RHOSO_18_DOC_BASE}/autoscaling_for_instances/index",
+        "ironic": f"{RHOSO_18_DOC_BASE}/configuring_the_bare_metal_provisioning_service/index",
+        "keystone": f"{RHOSO_18_DOC_BASE}/configuring_security_services/index",
+        "manila": f"{RHOSO_18_DOC_BASE}/performing_storage_operations/index",
+        "neutron": f"{RHOSO_18_DOC_BASE}/configuring_networking_services/index",
+        "nova": f"{RHOSO_18_DOC_BASE}/configuring_the_compute_service_for_instance_creation/index",
+        "octavia": f"{RHOSO_18_DOC_BASE}/configuring_load_balancing_as_a_service/index",
+        "placement": f"{RHOSO_18_DOC_BASE}/configuration_reference/placement_3",
+        "swift": f"{RHOSO_18_DOC_BASE}/performing_storage_operations/index",
+    },
+}
+
 RELEASES: dict[str, ReleaseMap] = {
     "18.0": ReleaseMap(
         rhoso_version="18.0",
         openstack_series="2023.1",
         openstack_name="Antelope",
         status="supported",
-        source_ids=("rhoso-18-overview", "openstack-2023.1-api"),
+        source_ids=("rhoso-18-overview", "rhoso-18-docs", "openstack-2023.1-api"),
         notes=(
             "RHOSO 18.0 is mapped to OpenStack 2023.1 Antelope for this tool's v1 catalog.",
         ),
@@ -355,6 +384,15 @@ def get_api_refs(openstack_series: str) -> tuple[ApiReference, ...]:
         supported = ", ".join(sorted(OPENSTACK_API_REFS))
         raise KeyError(
             f"Unsupported OpenStack series {openstack_series!r}; known series: {supported}"
+        ) from exc
+
+
+def get_rhoso_api_doc_url(rhoso_version: str, project: str) -> str:
+    try:
+        return RHOSO_API_DOC_URLS[rhoso_version][project]
+    except KeyError as exc:
+        raise KeyError(
+            f"No RHOSO {rhoso_version} API documentation URL is mapped for {project!r}"
         ) from exc
 
 

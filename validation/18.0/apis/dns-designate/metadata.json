@@ -2,8 +2,10 @@
   "api_reference": {
     "guide_url": null,
     "project": "designate",
-    "reference_url": "https://docs.openstack.org/api-ref/dns/",
-    "service_label": "DNS"
+    "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_dns_as_a_service/index",
+    "service_label": "DNS",
+    "upstream_guide_url": null,
+    "upstream_reference_url": "https://docs.openstack.org/api-ref/dns/"
   },
   "service": {
     "api_projects": [

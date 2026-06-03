@@ -1,9 +1,11 @@
 {
   "api_reference": {
-    "guide_url": "https://docs.openstack.org/barbican/2023.1/api-guide/",
+    "guide_url": null,
     "project": "barbican",
-    "reference_url": "https://docs.openstack.org/barbican/2023.1/api/",
-    "service_label": "Key Manager"
+    "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_security_services/index",
+    "service_label": "Key Manager",
+    "upstream_guide_url": "https://docs.openstack.org/barbican/2023.1/api-guide/",
+    "upstream_reference_url": "https://docs.openstack.org/barbican/2023.1/api/"
   },
   "service": {
     "api_projects": [

@@ -7,7 +7,8 @@ Operator: `octavia-operator`
 
 ## API Reference
 
-- Reference: [https://docs.openstack.org/api-ref/load-balancer/](https://docs.openstack.org/api-ref/load-balancer/)
+- RHOSO 18.0 docs: [https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_load_balancing_as_a_service/index](https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_load_balancing_as_a_service/index)
+- OpenStack API reference: [https://docs.openstack.org/api-ref/load-balancer/](https://docs.openstack.org/api-ref/load-balancer/)
 
 ## Validation URIs
 

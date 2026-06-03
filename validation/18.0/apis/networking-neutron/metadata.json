@@ -2,8 +2,10 @@
   "api_reference": {
     "guide_url": null,
     "project": "neutron",
-    "reference_url": "https://docs.openstack.org/api-ref/network/",
-    "service_label": "Networking"
+    "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_networking_services/index",
+    "service_label": "Networking",
+    "upstream_guide_url": null,
+    "upstream_reference_url": "https://docs.openstack.org/api-ref/network/"
   },
   "service": {
     "api_projects": [

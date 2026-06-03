@@ -7,7 +7,8 @@ Operator: `cinder-operator`
 
 ## API Reference
 
-- Reference: [https://docs.openstack.org/api-ref/block-storage/](https://docs.openstack.org/api-ref/block-storage/)
+- RHOSO 18.0 docs: [https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/performing_storage_operations/index](https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/performing_storage_operations/index)
+- OpenStack API reference: [https://docs.openstack.org/api-ref/block-storage/](https://docs.openstack.org/api-ref/block-storage/)
 
 ## Validation URIs
 

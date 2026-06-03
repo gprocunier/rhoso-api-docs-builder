@@ -7,8 +7,9 @@ Operator: `heat-operator`
 
 ## API Reference
 
-- Reference: [https://docs.openstack.org/api-ref/orchestration/](https://docs.openstack.org/api-ref/orchestration/)
-- API guide: [https://docs.openstack.org/heat/2023.1/template_guide/](https://docs.openstack.org/heat/2023.1/template_guide/)
+- RHOSO 18.0 docs: [https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/autoscaling_for_instances/index](https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/autoscaling_for_instances/index)
+- OpenStack API reference: [https://docs.openstack.org/api-ref/orchestration/](https://docs.openstack.org/api-ref/orchestration/)
+- OpenStack API guide: [https://docs.openstack.org/heat/2023.1/template_guide/](https://docs.openstack.org/heat/2023.1/template_guide/)
 
 ## Validation URIs
 

@@ -7,7 +7,8 @@ Operator: `neutron-operator`
 
 ## API Reference
 
-- Reference: [https://docs.openstack.org/api-ref/network/](https://docs.openstack.org/api-ref/network/)
+- RHOSO 18.0 docs: [https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_networking_services/index](https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_networking_services/index)
+- OpenStack API reference: [https://docs.openstack.org/api-ref/network/](https://docs.openstack.org/api-ref/network/)
 
 ## Validation URIs
 

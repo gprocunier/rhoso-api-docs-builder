@@ -1,4 +1,9 @@
-from rhoso_api_docs_builder.catalog import get_api_refs, get_release, get_services
+from rhoso_api_docs_builder.catalog import (
+    get_api_refs,
+    get_release,
+    get_rhoso_api_doc_url,
+    get_services,
+)
 
 
 def test_rhoso_18_release_mapping() -> None:
@@ -30,3 +35,12 @@ def test_single_item_limitations_are_tuples_not_character_sequences() -> None:
 def test_openstack_api_refs_include_core_supported_projects() -> None:
     refs = {api.project for api in get_api_refs("2023.1")}
     assert {"nova", "neutron", "cinder", "keystone", "glance", "manila"} <= refs
+
+
+def test_rhoso_api_doc_urls_are_release_specific() -> None:
+    assert (
+        get_rhoso_api_doc_url("18.0", "nova")
+        == "https://docs.redhat.com/en/documentation/"
+        "red_hat_openstack_services_on_openshift/18.0/html/"
+        "configuring_the_compute_service_for_instance_creation/index"
+    )

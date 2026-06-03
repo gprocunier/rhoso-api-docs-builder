@@ -59,7 +59,9 @@ For each supported API, the manifest emits all three URI forms:
 
 Red Hat Docs is the authority for which RHOSO services are supported. OpenStack
 release docs are the authority for upstream API references in a mapped OpenStack
-release. The generated output includes citations for both.
+release. The generated API reference link is always the selected RHOSO release
+version on Red Hat Docs; the upstream OpenStack REST API URL is retained as
+secondary metadata.
 
 The API output does not expose service default deployment state. If Red Hat ships
 the component in a supported state for the RHOSO release, it is included as a
@@ -70,6 +72,8 @@ Primary sources for v1:
 - Red Hat design system: https://ux.redhat.com/
 - RHOSO 18.0 planning overview and service operators:
   https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/planning_your_deployment/assembly_red-hat-openstack-services-on-openshift-overview
+- RHOSO 18.0 documentation index:
+  https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0
 - OpenStack 2023.1 API reference index:
   https://docs.openstack.org/2023.1/api/index.html
 - OpenStack 2026.1 API reference index:

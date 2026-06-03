@@ -3,6 +3,7 @@ from __future__ import annotations
 import html
 import json
 import shutil
+from dataclasses import replace
 from pathlib import Path
 
 from .catalog import (
@@ -11,6 +12,7 @@ from .catalog import (
     REPOSITORY,
     get_api_refs,
     get_release,
+    get_rhoso_api_doc_url,
     get_services,
     list_releases,
     source_citations,
@@ -41,12 +43,19 @@ def build_manifest(
             api_ref = api_by_project.get(project)
             if api_ref is None:
                 continue
+            release_api_ref = replace(
+                api_ref,
+                reference_url=get_rhoso_api_doc_url(rhoso_version, project),
+                guide_url=None,
+                upstream_reference_url=api_ref.reference_url,
+                upstream_guide_url=api_ref.guide_url,
+            )
             slug = service_api_slug(service.name, project)
             relative = f"validation/{rhoso_version}/apis/{slug}/"
             supported_apis.append(
                 SupportedApi(
                     service=service,
-                    api_reference=api_ref,
+                    api_reference=release_api_ref,
                     slug=slug,
                     semantic_uri=f"https://github.com/{repository}/{relative}",
                     github_tree_uri=f"https://github.com/{repository}/tree/{branch}/{relative}",
@@ -200,13 +209,14 @@ def render_release_markdown(manifest: ValidationManifest) -> str:
 
 RHOSO {release.rhoso_version} maps to OpenStack {release.openstack_series}
 {release.openstack_name}. This artifact intersects Red Hat-supported RHOSO
-services with upstream OpenStack API references for that OpenStack release.
+services with OpenStack API references, and links each matched API to the
+version-specific RHOSO documentation for this release.
 
 Generated at: `{manifest.generated_at}`
 
 ## Supported API Tree
 
-| RHOSO service | OpenStack project | Upstream API | Repository artifact |
+| RHOSO service | OpenStack project | RHOSO API docs | Repository artifact |
 | --- | --- | --- | --- |
 {api_rows}
 
@@ -222,9 +232,21 @@ Generated at: `{manifest.generated_at}`
 
 def render_api_markdown(manifest: ValidationManifest, api: SupportedApi) -> str:
     limitations = "\n".join(f"- {item}" for item in api.service.limitations) or "- None captured"
-    guide = (
-        f"\n- API guide: [{api.api_reference.guide_url}]({api.api_reference.guide_url})"
-        if api.api_reference.guide_url
+    rhoso_reference = (
+        f"- RHOSO {manifest.release.rhoso_version} docs: "
+        f"[{api.api_reference.reference_url}]({api.api_reference.reference_url})"
+    )
+    upstream_reference = (
+        "\n- OpenStack API reference: "
+        f"[{api.api_reference.upstream_reference_url}]"
+        f"({api.api_reference.upstream_reference_url})"
+        if api.api_reference.upstream_reference_url
+        else ""
+    )
+    upstream_guide = (
+        "\n- OpenStack API guide: "
+        f"[{api.api_reference.upstream_guide_url}]({api.api_reference.upstream_guide_url})"
+        if api.api_reference.upstream_guide_url
         else ""
     )
     return f"""# {api.service.name}
@@ -236,7 +258,7 @@ Operator: `{api.service.operator}`
 
 ## API Reference
 
-- Reference: [{api.api_reference.reference_url}]({api.api_reference.reference_url}){guide}
+{rhoso_reference}{upstream_reference}{upstream_guide}
 
 ## Validation URIs
 
@@ -348,8 +370,8 @@ def render_release_html(manifest: ValidationManifest) -> str:
   <td data-label="RHOSO service"><a href="apis/{api.slug}/">{html.escape(api.service.name)}</a></td>
   <td data-label="OpenStack project"><code>{html.escape(api.api_reference.project)}</code></td>
   <td data-label="Operator">{html.escape(api.service.operator)}</td>
-  <td data-label="Upstream API">
-    <a href="{html.escape(api.api_reference.reference_url)}">API reference</a>
+  <td data-label="RHOSO API docs">
+    <a href="{html.escape(api.api_reference.reference_url)}">RHOSO docs</a>
   </td>
 </tr>
 """
@@ -382,7 +404,7 @@ def render_release_html(manifest: ValidationManifest) -> str:
           <th>RHOSO service</th>
           <th>OpenStack project</th>
           <th>Operator</th>
-          <th>Upstream API</th>
+          <th>RHOSO API docs</th>
         </tr>
       </thead>
       <tbody>{api_rows}</tbody>
@@ -428,12 +450,18 @@ def render_api_html(manifest: ValidationManifest, api: SupportedApi) -> str:
     reference_items = [
         (
             f'<li><a href="{html.escape(api.api_reference.reference_url)}">'
-            "Upstream API reference</a></li>"
+            f"RHOSO {html.escape(manifest.release.rhoso_version)} documentation</a></li>"
         )
     ]
-    if api.api_reference.guide_url:
+    if api.api_reference.upstream_reference_url:
         reference_items.append(
-            f'<li><a href="{html.escape(api.api_reference.guide_url)}">API guide</a></li>'
+            f'<li><a href="{html.escape(api.api_reference.upstream_reference_url)}">'
+            "OpenStack API reference</a></li>"
+        )
+    if api.api_reference.upstream_guide_url:
+        reference_items.append(
+            f'<li><a href="{html.escape(api.api_reference.upstream_guide_url)}">'
+            "OpenStack API guide</a></li>"
         )
     reference_list = "\n    ".join(reference_items)
     return html_page(

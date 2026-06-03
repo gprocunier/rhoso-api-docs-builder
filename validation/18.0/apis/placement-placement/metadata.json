@@ -2,8 +2,10 @@
   "api_reference": {
     "guide_url": null,
     "project": "placement",
-    "reference_url": "https://docs.openstack.org/api-ref/placement/",
-    "service_label": "Placement"
+    "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuration_reference/placement_3",
+    "service_label": "Placement",
+    "upstream_guide_url": null,
+    "upstream_reference_url": "https://docs.openstack.org/api-ref/placement/"
   },
   "service": {
     "api_projects": [

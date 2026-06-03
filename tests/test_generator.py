@@ -23,6 +23,14 @@ def test_build_outputs_writes_validation_tree(tmp_path: Path) -> None:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     assert manifest["release"]["openstack_name"] == "Antelope"
     assert "default_state" not in json.dumps(manifest)
+    for supported_api in manifest["supported_apis"]:
+        api_reference = supported_api["api_reference"]
+        assert (
+            "docs.redhat.com/en/documentation/"
+            "red_hat_openstack_services_on_openshift/18.0/"
+            in api_reference["reference_url"]
+        )
+        assert api_reference["upstream_reference_url"].startswith("https://docs.openstack.org/")
     assert (output / "18.0" / "apis" / "compute-nova" / "index.md").exists()
     assert (site / "validation" / "18.0" / "apis" / "compute-nova" / "index.html").exists()
     assert (site / "validation" / "19.0" / "index.html").exists()
@@ -37,6 +45,7 @@ def test_site_includes_release_dropdown_and_tile_list_toggle(tmp_path: Path) -> 
     assert "RHOSO 19.0 beta" in home
     assert 'id="view-tiles"' in release
     assert 'id="view-list"' in release
+    assert "RHOSO API docs" in release
     assert "Beta selection available" in beta
 
 

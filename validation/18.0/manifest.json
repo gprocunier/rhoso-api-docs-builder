@@ -6,97 +6,129 @@
       "guide_url": null,
       "project": "cyborg",
       "reference_url": "https://docs.openstack.org/api-ref/accelerator/",
-      "service_label": "Accelerator Life Cycle Management"
+      "service_label": "Accelerator Life Cycle Management",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "murano",
       "reference_url": "https://docs.openstack.org/api-ref/application-catalog/",
-      "service_label": "Application Catalog"
+      "service_label": "Application Catalog",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "freezer",
       "reference_url": "https://docs.openstack.org/api-ref/backup/",
-      "service_label": "Backup, Restore, and Disaster Recovery"
+      "service_label": "Backup, Restore, and Disaster Recovery",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "senlin",
       "reference_url": "https://docs.openstack.org/api-ref/clustering/",
-      "service_label": "Clustering"
+      "service_label": "Clustering",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "magnum",
       "reference_url": "https://docs.openstack.org/api-ref/container-infrastructure-management/",
-      "service_label": "Container Infrastructure Management"
+      "service_label": "Container Infrastructure Management",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "zun",
       "reference_url": "https://docs.openstack.org/api-ref/container/",
-      "service_label": "Containers"
+      "service_label": "Containers",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "trove",
       "reference_url": "https://docs.openstack.org/api-ref/database/",
-      "service_label": "Database"
+      "service_label": "Database",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "ec2-api",
       "reference_url": "https://docs.openstack.org/api-ref/ec2-api/",
-      "service_label": "EC2 API compatibility layer"
+      "service_label": "EC2 API compatibility layer",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "watcher",
       "reference_url": "https://docs.openstack.org/api-ref/resource-optimization/",
-      "service_label": "Infrastructure Optimization"
+      "service_label": "Infrastructure Optimization",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "masakari",
       "reference_url": "https://docs.openstack.org/api-ref/instance-ha/",
-      "service_label": "Instances High Availability"
+      "service_label": "Instances High Availability",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "venus",
       "reference_url": "https://docs.openstack.org/api-ref/log-management/",
-      "service_label": "Log Management"
+      "service_label": "Log Management",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "zaqar",
       "reference_url": "https://docs.openstack.org/api-ref/messaging/",
-      "service_label": "Messaging"
+      "service_label": "Messaging",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "tacker",
       "reference_url": "https://docs.openstack.org/api-ref/nfv-orchestration/",
-      "service_label": "NFV Orchestration"
+      "service_label": "NFV Orchestration",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "adjutant",
       "reference_url": "https://docs.openstack.org/api-ref/operations-processes-automation/",
-      "service_label": "Operations Processes Automation"
+      "service_label": "Operations Processes Automation",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "cloudkitty",
       "reference_url": "https://docs.openstack.org/api-ref/rating/",
-      "service_label": "Rating"
+      "service_label": "Rating",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     },
     {
       "guide_url": null,
       "project": "blazar",
       "reference_url": "https://docs.openstack.org/api-ref/reservation/",
-      "service_label": "Resource reservation"
+      "service_label": "Resource reservation",
+      "upstream_guide_url": null,
+      "upstream_reference_url": null
     }
   ],
   "generated_at": "2026-06-03",
@@ -109,6 +141,7 @@
     "rhoso_version": "18.0",
     "source_ids": [
       "rhoso-18-overview",
+      "rhoso-18-docs",
       "openstack-2023.1-api"
     ],
     "status": "supported"
@@ -120,6 +153,12 @@
       "note": "Primary RHOSO 18.0 source for service operators and known limitations.",
       "title": "RHOSO 18.0 planning overview and service operators",
       "url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/planning_your_deployment/assembly_red-hat-openstack-services-on-openshift-overview"
+    },
+    {
+      "id": "rhoso-18-docs",
+      "note": "Version-specific Red Hat documentation used for primary API documentation links.",
+      "title": "RHOSO 18.0 Red Hat documentation index",
+      "url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0"
     },
     {
       "id": "openstack-2023.1-api",
@@ -139,8 +178,10 @@
       "api_reference": {
         "guide_url": null,
         "project": "ironic",
-        "reference_url": "https://docs.openstack.org/api-ref/baremetal/",
-        "service_label": "Bare Metal"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_the_bare_metal_provisioning_service/index",
+        "service_label": "Bare Metal",
+        "upstream_guide_url": null,
+        "upstream_reference_url": "https://docs.openstack.org/api-ref/baremetal/"
       },
       "service": {
         "api_projects": [
@@ -166,8 +207,10 @@
       "api_reference": {
         "guide_url": null,
         "project": "cinder",
-        "reference_url": "https://docs.openstack.org/api-ref/block-storage/",
-        "service_label": "Block Storage"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/performing_storage_operations/index",
+        "service_label": "Block Storage",
+        "upstream_guide_url": null,
+        "upstream_reference_url": "https://docs.openstack.org/api-ref/block-storage/"
       },
       "service": {
         "api_projects": [
@@ -195,10 +238,12 @@
     },
     {
       "api_reference": {
-        "guide_url": "https://docs.openstack.org/api-guide/compute/",
+        "guide_url": null,
         "project": "nova",
-        "reference_url": "https://docs.openstack.org/api-ref/compute/",
-        "service_label": "Compute"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_the_compute_service_for_instance_creation/index",
+        "service_label": "Compute",
+        "upstream_guide_url": "https://docs.openstack.org/api-guide/compute/",
+        "upstream_reference_url": "https://docs.openstack.org/api-ref/compute/"
       },
       "service": {
         "api_projects": [
@@ -234,8 +279,10 @@
       "api_reference": {
         "guide_url": null,
         "project": "designate",
-        "reference_url": "https://docs.openstack.org/api-ref/dns/",
-        "service_label": "DNS"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_dns_as_a_service/index",
+        "service_label": "DNS",
+        "upstream_guide_url": null,
+        "upstream_reference_url": "https://docs.openstack.org/api-ref/dns/"
       },
       "service": {
         "api_projects": [
@@ -261,8 +308,10 @@
       "api_reference": {
         "guide_url": null,
         "project": "keystone",
-        "reference_url": "https://docs.openstack.org/api-ref/identity/",
-        "service_label": "Identity"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_security_services/index",
+        "service_label": "Identity",
+        "upstream_guide_url": null,
+        "upstream_reference_url": "https://docs.openstack.org/api-ref/identity/"
       },
       "service": {
         "api_projects": [
@@ -288,8 +337,10 @@
       "api_reference": {
         "guide_url": null,
         "project": "glance",
-        "reference_url": "https://docs.openstack.org/api-ref/image/",
-        "service_label": "Image"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/performing_storage_operations/index",
+        "service_label": "Image",
+        "upstream_guide_url": null,
+        "upstream_reference_url": "https://docs.openstack.org/api-ref/image/"
       },
       "service": {
         "api_projects": [
@@ -316,10 +367,12 @@
     },
     {
       "api_reference": {
-        "guide_url": "https://docs.openstack.org/barbican/2023.1/api-guide/",
+        "guide_url": null,
         "project": "barbican",
-        "reference_url": "https://docs.openstack.org/barbican/2023.1/api/",
-        "service_label": "Key Manager"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_security_services/index",
+        "service_label": "Key Manager",
+        "upstream_guide_url": "https://docs.openstack.org/barbican/2023.1/api-guide/",
+        "upstream_reference_url": "https://docs.openstack.org/barbican/2023.1/api/"
       },
       "service": {
         "api_projects": [
@@ -345,8 +398,10 @@
       "api_reference": {
         "guide_url": null,
         "project": "octavia",
-        "reference_url": "https://docs.openstack.org/api-ref/load-balancer/",
-        "service_label": "Load-balancer"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_load_balancing_as_a_service/index",
+        "service_label": "Load-balancer",
+        "upstream_guide_url": null,
+        "upstream_reference_url": "https://docs.openstack.org/api-ref/load-balancer/"
       },
       "service": {
         "api_projects": [
@@ -372,8 +427,10 @@
       "api_reference": {
         "guide_url": null,
         "project": "neutron",
-        "reference_url": "https://docs.openstack.org/api-ref/network/",
-        "service_label": "Networking"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuring_networking_services/index",
+        "service_label": "Networking",
+        "upstream_guide_url": null,
+        "upstream_reference_url": "https://docs.openstack.org/api-ref/network/"
       },
       "service": {
         "api_projects": [
@@ -399,8 +456,10 @@
       "api_reference": {
         "guide_url": null,
         "project": "swift",
-        "reference_url": "https://docs.openstack.org/api-ref/object-store/",
-        "service_label": "Object Storage"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/performing_storage_operations/index",
+        "service_label": "Object Storage",
+        "upstream_guide_url": null,
+        "upstream_reference_url": "https://docs.openstack.org/api-ref/object-store/"
       },
       "service": {
         "api_projects": [
@@ -424,10 +483,12 @@
     },
     {
       "api_reference": {
-        "guide_url": "https://docs.openstack.org/heat/2023.1/template_guide/",
+        "guide_url": null,
         "project": "heat",
-        "reference_url": "https://docs.openstack.org/api-ref/orchestration/",
-        "service_label": "Orchestration"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/autoscaling_for_instances/index",
+        "service_label": "Orchestration",
+        "upstream_guide_url": "https://docs.openstack.org/heat/2023.1/template_guide/",
+        "upstream_reference_url": "https://docs.openstack.org/api-ref/orchestration/"
       },
       "service": {
         "api_projects": [
@@ -453,8 +514,10 @@
       "api_reference": {
         "guide_url": null,
         "project": "placement",
-        "reference_url": "https://docs.openstack.org/api-ref/placement/",
-        "service_label": "Placement"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/configuration_reference/placement_3",
+        "service_label": "Placement",
+        "upstream_guide_url": null,
+        "upstream_reference_url": "https://docs.openstack.org/api-ref/placement/"
       },
       "service": {
         "api_projects": [
@@ -480,8 +543,10 @@
       "api_reference": {
         "guide_url": null,
         "project": "manila",
-        "reference_url": "https://docs.openstack.org/api-ref/shared-file-system/",
-        "service_label": "Shared File Systems"
+        "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/performing_storage_operations/index",
+        "service_label": "Shared File Systems",
+        "upstream_guide_url": null,
+        "upstream_reference_url": "https://docs.openstack.org/api-ref/shared-file-system/"
       },
       "service": {
         "api_projects": [

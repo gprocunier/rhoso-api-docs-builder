@@ -2,8 +2,10 @@
   "api_reference": {
     "guide_url": null,
     "project": "swift",
-    "reference_url": "https://docs.openstack.org/api-ref/object-store/",
-    "service_label": "Object Storage"
+    "reference_url": "https://docs.redhat.com/en/documentation/red_hat_openstack_services_on_openshift/18.0/html/performing_storage_operations/index",
+    "service_label": "Object Storage",
+    "upstream_guide_url": null,
+    "upstream_reference_url": "https://docs.openstack.org/api-ref/object-store/"
   },
   "service": {
     "api_projects": [
